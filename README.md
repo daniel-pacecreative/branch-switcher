@@ -16,26 +16,26 @@ include the script to load the rest of the site. Any files that are requested
 before the switch gets made will obviously not reflect any of the changes on
 the new branch. 
 
-/** START BRANCH CODE  */
-session_start();
+		/** START BRANCH CODE  */
+		session_start();
 
-// look for branch set in session
-$branch = isset( $_SESSION['branch'] ) ? $_SESSION['branch'] : false;
+		// look for branch set in session
+		$branch = isset( $_SESSION['branch'] ) ? $_SESSION['branch'] : false;
 
-// fall back on master branch
-if( false !== $branch ) {
+		// fall back on master branch
+		if( false !== $branch ) {
     
-    // sanitize input
-    $branch = escapeshellarg($branch);
-    
-    // run git commands
-    shell_exec('git fetch');   
-    shell_exec('git checkout '.$branch);
-    shell_exec('git pull origin '.$branch);
-} else {    
-    
-    // run git commands
-    shell_exec('git checkout master');
-    shell_exec('git pull');
-}
-/** END BRANCH CODE */
+			// sanitize input
+			$branch = escapeshellarg($branch);
+			
+			// run git commands
+			shell_exec('git fetch');   
+			shell_exec('git checkout '.$branch);
+			shell_exec('git pull origin '.$branch);
+		} else {    
+			
+			// run git commands
+			shell_exec('git checkout master');
+			shell_exec('git pull');
+		}
+		/** END BRANCH CODE */
