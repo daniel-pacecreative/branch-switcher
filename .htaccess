@@ -1,4 +1,4 @@
-ErrorDocument 403 /branch/error/error403.html
+ErrorDocument 403 "Your IP does not have access to the branch switcher."
 
 Order Deny,Allow
 Deny from all
