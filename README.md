@@ -1,4 +1,5 @@
-== Branch Switcher ==
+Branch Switcher
+===============
 This folder contains *most* of the necessary changes to switch between the
 branches of a git project via the web, on demand. Access is restricted by 
 .htaccess with an IP whitelist, so make sure to update that.
