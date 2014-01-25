@@ -2,9 +2,10 @@
 session_start();
 
     // check for what branches exist locally
+    shell_exec('cd ..');
     $output = shell_exec('git branch');
     $branches = explode("\n",$output);
-    
+    	
     // trailing key is empty
     array_pop($branches);
 		
@@ -34,7 +35,7 @@ session_start();
 		    $selected = (false !== strpos($branch,'*'));
 
 		    ?>
-		    <option value="<?php echo trim($branch,' *') ?>"<? echo $selected ? ' selected="selected"' : '' ?>><?php echo $branch ?></option>
+		    <option value="<?php echo trim($branch,' *') ?>"<?php echo $selected ? ' selected="selected"' : '' ?>><?php echo $branch ?></option>
 		    <?php
 		}
 	?>
