@@ -20,7 +20,7 @@ session_start();
 <form action="change_branch.php" method="post" target="_blank">
     <h1>Branch Switcher</h1>
     <p>
-	Use this page to switch between git branches to test on the staging server.
+	Use this page to switch between git branches on the server. The branch you select will be stored in your session, and will not interfere with any other users.
     </p>
     <p>
 	<b>Tracked Branches</b><br />
