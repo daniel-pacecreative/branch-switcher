@@ -2,7 +2,7 @@
 session_start();
 
     // check for what branches exist locally
-    shell_exec('cd ..');
+    chdir('..');	
     $output = shell_exec('git branch');
     $branches = explode("\n",$output);
     	
